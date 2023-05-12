@@ -36,13 +36,15 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCuenta = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSaldo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNumCuenta = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnIngreso = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +53,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(311, 28);
+            this.label1.Location = new System.Drawing.Point(347, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(249, 43);
             this.label1.TabIndex = 0;
@@ -111,7 +113,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(97, 234);
+            this.button1.Location = new System.Drawing.Point(31, 235);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 37);
             this.button1.TabIndex = 5;
@@ -123,7 +125,7 @@
             // 
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.btnCuenta);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtSaldo);
             this.groupBox2.Controls.Add(this.label5);
@@ -136,6 +138,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cuenta";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Enabled = false;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Cuenta de ahorro",
+            "Cuenta corriente"});
+            this.comboBox1.Location = new System.Drawing.Point(41, 243);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(216, 33);
+            this.comboBox1.TabIndex = 12;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -146,16 +161,17 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Tipo de Cuenta:";
             // 
-            // button2
+            // btnCuenta
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(129, 312);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 37);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Guardar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnCuenta.Enabled = false;
+            this.btnCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCuenta.Location = new System.Drawing.Point(129, 312);
+            this.btnCuenta.Name = "btnCuenta";
+            this.btnCuenta.Size = new System.Drawing.Size(117, 37);
+            this.btnCuenta.TabIndex = 10;
+            this.btnCuenta.Text = "Guardar";
+            this.btnCuenta.UseVisualStyleBackColor = true;
+            this.btnCuenta.Click += new System.EventHandler(this.button2_Click);
             // 
             // label4
             // 
@@ -169,6 +185,7 @@
             // 
             // txtSaldo
             // 
+            this.txtSaldo.Enabled = false;
             this.txtSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSaldo.Location = new System.Drawing.Point(41, 78);
             this.txtSaldo.Name = "txtSaldo";
@@ -187,29 +204,42 @@
             // 
             // txtNumCuenta
             // 
+            this.txtNumCuenta.Enabled = false;
             this.txtNumCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumCuenta.Location = new System.Drawing.Point(41, 153);
             this.txtNumCuenta.Name = "txtNumCuenta";
             this.txtNumCuenta.Size = new System.Drawing.Size(216, 30);
             this.txtNumCuenta.TabIndex = 7;
             // 
-            // comboBox1
+            // button2
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Cuenta de ahorro",
-            "Cuenta corriente"});
-            this.comboBox1.Location = new System.Drawing.Point(41, 243);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(216, 33);
-            this.comboBox1.TabIndex = 12;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(52, 489);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(138, 74);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Ver balances";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // btnIngreso
+            // 
+            this.btnIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngreso.Location = new System.Drawing.Point(236, 489);
+            this.btnIngreso.Name = "btnIngreso";
+            this.btnIngreso.Size = new System.Drawing.Size(151, 74);
+            this.btnIngreso.TabIndex = 9;
+            this.btnIngreso.Text = "Realizar operaciones";
+            this.btnIngreso.UseVisualStyleBackColor = true;
+            this.btnIngreso.Click += new System.EventHandler(this.btnIngreso_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(945, 594);
+            this.Controls.Add(this.btnIngreso);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -234,13 +264,15 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCuenta;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSaldo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNumCuenta;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnIngreso;
     }
 }
 

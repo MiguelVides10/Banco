@@ -19,7 +19,7 @@ namespace Banco
 
         public override string ToString()
         {
-            return this.nombre+" "+this.dui;
+            return this.nombre+","+this.dui;
         }
     }
 }
